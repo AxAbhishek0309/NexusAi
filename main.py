@@ -23,9 +23,9 @@ st.set_page_config(
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/4712/4712105.png", width=120)
     st.markdown("## Nexus AI Assistant")
-    st.markdown("Your multi-modal Gemini-powered companion.")
+    st.markdown("Your multi-modal AI-powered companion.")
     selected = option_menu(
-        "Gemini AI",
+        "Nexus AI",
         ['ChatBot', 'Image Captioning', 'Embed text', 'Ask me anything'],
         menu_icon='robot',
         icons=['chat-dots-fill', 'image-fill', 'textarea-t', 'patch-question-fill'],
@@ -45,7 +45,7 @@ if selected == 'ChatBot':
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
-    st.title("🤖 Gemini ChatBot")
+    st.title("🤖 Nexus AI ChatBot")
 
     # Create a container for chat messages (top)
     chat_placeholder = st.container()
@@ -61,7 +61,7 @@ if selected == 'ChatBot':
 
     # Place input at the bottom of the screen
     with input_placeholder:
-        user_input = st.chat_input("Ask Gemini-Pro...")
+        user_input = st.chat_input("Ask Nexus AI...")
 
     # When user sends a message
     if user_input:
@@ -82,7 +82,7 @@ if selected == 'ChatBot':
 # -------------------- Image Captioning --------------------
 if selected == "Image Captioning":
     st.title("📸 Snap Narrate")
-    st.markdown("Upload an image and let Gemini describe it!")
+    st.markdown("Upload an image and let Nexus AI describe it!")
 
     uploaded_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
@@ -102,7 +102,7 @@ if selected == "Image Captioning":
 # -------------------- Embeddings --------------------
 if selected == "Embed text":
     st.title("🧩 Embed Text")
-    st.markdown("Convert any piece of text into a numerical vector using Gemini embeddings.")
+    st.markdown("Convert any piece of text into a numerical vector using Nexus AI embeddings.")
 
     user_prompt = st.text_area("Enter text below 👇")
 
@@ -114,7 +114,7 @@ if selected == "Embed text":
 # -------------------- Ask Me Anything --------------------
 if selected == "Ask me anything":
     st.title("❓ Ask Me Anything")
-    st.markdown("Type your question and let Gemini answer it!")
+    st.markdown("Type your question and let Nexus AI answer it!")
 
     user_prompt = st.text_area("Your question")
 
